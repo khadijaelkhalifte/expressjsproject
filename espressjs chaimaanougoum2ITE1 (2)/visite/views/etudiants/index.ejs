@@ -1,0 +1,27 @@
+  <%- include('../partials/header')%>
+  <table class="table table-light table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% etudiant.forEach(function(e){ %>
+            <tr>
+                <td><%= e.id %></td>
+                <td><%= e.nom %></td>
+                
+                <td>
+                    <a href="edit/<%= e.id %>" class="btn btn-warning">Edit</a>
+                    <a href="delete/<%= e.id %>" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
